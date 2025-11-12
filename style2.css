@@ -1,24 +1,154 @@
+/* Importation d'une police Google Fonts pour un look plus moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- Règle de base --- */
+:root {
+    /* Votre bleu turquoise préféré (ajusté pour le web) */
+    --bleu-turquoise-parfait: #40e0d0; 
+    --couleur-primaire: var(--bleu-turquoise-parfait);
+    --couleur-secondaire: #2c3e50; /* Bleu foncé pour le contraste */
+    --couleur-fond: #ecf0f1; /* Gris très clair */
+    --couleur-texte: #333;
+    --couleur-bordure: #bdc3c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* S'assurer que le pied de page reste en bas */
 }
 
-h1 {
-    color: #40e0d0; 
-}
-
-#resultats-voitures {
-    margin-top: 30px;
-    padding: 20px;
-    border: 1px solid #ccc;
+/* --- En-tête (Header) --- */
+header {
     background-color: #fff;
+    color: var(--couleur-secondaire);
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 60px; /* Taille du logo */
+    margin-right: 15px;
+    border-radius: 50%; /* Pour un effet sympa si le logo le permet */
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--couleur-primaire); /* Titre en bleu turquoise */
+}
+
+/* --- Contenu Principal (Main) --- */
+main {
+    flex-grow: 1; /* Permet au contenu principal de prendre l'espace restant */
+    padding: 40px 5%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centrer le contenu */
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: var(--couleur-secondaire);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--couleur-bordure);
+    padding-bottom: 5px;
+}
+
+/* --- Bouton --- */
+button {
+    background-color: var(--couleur-primaire);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #00ced1; /* Un peu plus foncé au survol */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* --- Section des Résultats --- */
+#resultats-voitures {
+    background-color: white;
+    border: 1px solid var(--couleur-bordure);
+    border-left: 5px solid var(--couleur-primaire); /* Bande de couleur pour l'accent */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 100px; /* Pour éviter le tassement au début */
 }
 
 #resultats-voitures p {
-    font-size: 1.1em;
-    padding: 5px 0;
-    border-bottom: 1px dotted #eee;
+    color: var(--couleur-texte);
+    font-style: italic;
+}
+
+/* Style pour les éléments qui seront ajoutés par JavaScript (ex: divs ou p par voiture) */
+#resultats-voitures div,
+#resultats-voitures p:not(:first-child) {
+    border-bottom: 1px dotted var(--couleur-bordure);
+    padding: 10px 0;
+}
+
+/* --- Pied de Page (Footer) --- */
+footer {
+    background-color: var(--couleur-secondaire);
+    color: #fff;
+    text-align: center;
+    padding: 15px 5%;
+    font-size: 0.9em;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
+
+/* --- Adaptabilité (Optionnel, mais toujours utile) --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    main {
+        padding: 20px 5%;
+    }
 }
