@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    /* La couleur bleu turquoise ! */
+    color: #40e0d0; 
+}
+
+#resultats-voitures {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#resultats-voitures p {
+    font-size: 1.1em;
+    padding: 5px 0;
+    border-bottom: 1px dotted #eee;
+}
