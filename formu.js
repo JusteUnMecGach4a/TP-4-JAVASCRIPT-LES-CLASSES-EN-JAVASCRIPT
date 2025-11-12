@@ -1,28 +1,35 @@
 class Voiture {
+    /**
+     * Constructeur pour initialiser la marque et l'année.
+     * @param {string} marque 
+     * @param {number} annee 
+     */
     constructor(marque, annee) {
-        // Les propriétés sont souvent préfixées d'un underscore (_)
-        // lorsqu'elles sont gérées par des Setters/Getters.
-        this._marque = marque; 
-        this._annee = annee;
+        this._marque = marque; // Propriété 1
+        this._annee = annee;   // Propriété 2
     }
 
-    // 1. GETTER (Accesseur) pour la marque
-    get marque() {
+    // ===================================
+    // ACCESSEURS (Getters) - Consigne TP E6-TP4
+    // ===================================
+
+    getMarque() {
         return this._marque;
     }
 
-    // 2. SETTER (Mutateur) pour la marque
-    set marque(nouvelleMarque) {
-        this._marque = nouvelleMarque;
-    }
-
-    // 3. GETTER (Accesseur) pour l'année
-    get annee() {
+    getAnnee() {
         return this._annee;
     }
 
-    // 4. SETTER (Mutateur) pour l'année
-    set annee(nouvelleAnnee) {
+    // ===================================
+    // MUTATEURS (Setters) - Ajoutés pour la logique
+    // ===================================
+
+    setMarque(nouvelleMarque) {
+        this._marque = nouvelleMarque;
+    }
+
+    setAnnee(nouvelleAnnee) {
         this._annee = nouvelleAnnee;
     }
 }
