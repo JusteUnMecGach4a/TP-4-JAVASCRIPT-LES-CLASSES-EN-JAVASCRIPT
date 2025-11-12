@@ -1,6 +1,7 @@
 # TP-4 JAVASCRIPT : LES CLASSES EN JAVASCRIPT
 
-## Réponse aux questions 1 et 2 (Donner la classe Voiture possédant 2 caractéristiques : la marque et l’année. Donner 2 méthodes accesseur nommées getMarque et getAnnee...)
+## Réponse aux questions 1 et 2 (Donner la classe Voiture possédant 2 caractéristiques : la marque et l’année. Donner 2 méthodes accesseur nommées getMarque et getAnnee permettant de renvoyer
+respectivement la marque et l’année de l’objet considéré.)
 
 ```
 javascript class Voiture { constructor(marque, annee) { this._marque = marque; this._annee = annee; }
